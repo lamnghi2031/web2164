@@ -12,34 +12,30 @@ const router = express.Router();
 // Routing WEB
 
 //--- Home
-router.get('',
+router.get('/',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Home !");
+        res.sendFile("./view/home.html");
     }
 );
 
 //--- Profile
 router.get('/profile',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Profile !");
+        res.sendFile("./view/profile.html");
     }
 );
 
 //--- Login
 router.get('/login',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Login !");
+        res.sendFile("./view/login.html");
     }
 );
 
 //--- Logout
 router.get('/logout',
     (req, res) => {
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.send("Đây là trang Logout !");
+        res.sendFile("./view/logout.html");
     }
 );
 
